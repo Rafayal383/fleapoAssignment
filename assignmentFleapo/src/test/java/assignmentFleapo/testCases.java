@@ -64,7 +64,12 @@ class testCases {
 	
 		Actions a = new Actions(driver);
 		a.keyDown(Keys.PAGE_DOWN).build().perform();
-//		a.sendKeys(Keys.PAGE_DOWN);
-//		a.sendKeys(Keys.PAGE_DOWN);
+		Thread.sleep(3000);
+		driver.findElement(By.id("upload-cover-input")).sendKeys("C:\\Users\\ajay rafayal\\Desktop\\17kohli1.jpg");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	}
 }
